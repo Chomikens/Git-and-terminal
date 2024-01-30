@@ -26,6 +26,17 @@ Git is a version control system that allows you to track changes in your source 
     -   `git add .` adds all changed files to the staging area.
     -   `git add [file name]` adds a specific file to the staging area.
 
+
+## Undoing Staged Changes
+
+### `git restore --staged [file name]`
+
+-   **Purpose**: Unstages files that have been added to the staging area, without discarding local changes.
+-   **Usage**:
+    -   To unstage a specific file, use `git restore --staged [file name]`. This command removes the file from the staging area but keeps the changes in your working directory.
+    -   If you accidentally stage a file that you didn't intend to commit, this command is used to revert that action.
+-   **Note**: This command does not affect the current changes in the file; it only removes the file from the staging area. The modifications made to the file remain intact in your working directory.
+
 ## Committing Changes
 
 ### `git commit -m "[commit message]"`
@@ -50,3 +61,18 @@ Git is a version control system that allows you to track changes in your source 
     -   To find out the size of an object, use `git cat-file -s [object hash]`.
 -   **Example**: To explore a commit, first find its hash using `git log`, then use `git cat-file -p [commit hash]` to view detailed information about the commit.
 -   **Note**: This is an advanced command, primarily used for internal inspections and debugging.
+
+
+
+## Resetting the Repository
+
+### `git reset --hard [commit]`
+
+-   **Purpose**: Resets the current HEAD, index, and working directory to the state of a specified commit, discarding all local changes.
+-   **Usage**:
+    -   To reset to a specific commit, use `git reset --hard [commit hash]`.
+    -   Without specifying a commit, `git reset --hard` will reset to the latest commit, discarding all changes since then.
+-   **Warning**: This command permanently undoes all uncommitted changes and should be used with extreme caution. There is no easy way to recover lost work after using `git reset --hard`.
+-   **Common Use Cases**:
+    -   Discarding all local changes and returning to the most recent commit state.
+    -   Reverting the repository to a known good state if recent commits or changes have introduced issues.
