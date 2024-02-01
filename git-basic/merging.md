@@ -9,3 +9,7 @@ More clearly: if you want to merge branch with main. Switch to main.
 
 Here we use method `fast forward`. 
 Know "HEAD" will point to main and new branch.
+
+## How to handle conflit 
+When we have conflict we must change file. 
+We can also use code editor helper
