@@ -1,4 +1,6 @@
 # Branches
+Branch is a pointer only to the commit!
+
 ## Displaying Branches
 
 ### `git branch`
