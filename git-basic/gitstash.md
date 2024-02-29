@@ -13,3 +13,17 @@
 -   **Purpose**: Lists all stashed changes.
 -   **Usage**: Type `git stash list` to see a list of all stashed changes.
 -   The list includes a stash reference (e.g., `stash@{0}`), along with a description of the stashed changes and the commit where the stash was created.
+
+### `git stash apply [stash reference]`
+
+-   **Purpose**: Applies the changes from a specific stash to your working directory and index without removing it from the stash list.
+-   **Usage**:
+    -   Type `git stash apply [stash reference]` to apply the changes from a specific stash.
+    -   You can use `git stash list` to find the reference of the stash you want to apply.
+
+### `git stash pop [stash reference]`
+
+-   **Purpose**: Applies the changes from a specific stash to your working directory and index and removes it from the stash list.
+-   **Usage**:
+    -   Type `git stash pop [stash reference]` to apply the changes from a specific stash and remove it from the stash list.
+    -   Similar to `git stash apply`, but removes the applied stash from the list after applying.
