@@ -40,3 +40,17 @@
 -   **Purpose**: Removes all stashed changes from the stash list.
 -   **Usage**: Type `git stash clear` to remove all stashed changes from the stash list.
 -   Useful for clearing out old or unnecessary stashes, especially after they have been applied or resolved.
+
+### `git stash show [stash reference]`
+
+-   **Purpose**: Displays the changes stored in a specific stash.
+-   **Usage**:
+    -   Type `git stash show [stash reference]` to display the changes stored in a specific stash.
+    -   Shows a summary of the changes, including file names and a brief overview of modifications.
+
+### `git stash branch [branch name] [stash reference]`
+
+-   **Purpose**: Creates a new branch from a specific stash and applies the changes to that branch.
+-   **Usage**:
+    -   Type `git stash branch [branch name] [stash reference]` to create a new branch from a specific stash and apply the changes to that branch.
+    -   Useful for working on stashed changes in isolation, without affecting the current branch.
