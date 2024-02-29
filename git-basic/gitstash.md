@@ -27,3 +27,16 @@
 -   **Usage**:
     -   Type `git stash pop [stash reference]` to apply the changes from a specific stash and remove it from the stash list.
     -   Similar to `git stash apply`, but removes the applied stash from the list after applying.
+
+### `git stash drop [stash reference]`
+
+-   **Purpose**: Removes a specific stash from the stash list.
+-   **Usage**:
+    -   Type `git stash drop [stash reference]` to remove a specific stash from the stash list.
+    -   Useful for cleaning up the stash list after applying or resolving stashed changes.
+
+### `git stash clear`
+
+-   **Purpose**: Removes all stashed changes from the stash list.
+-   **Usage**: Type `git stash clear` to remove all stashed changes from the stash list.
+-   Useful for clearing out old or unnecessary stashes, especially after they have been applied or resolved.
